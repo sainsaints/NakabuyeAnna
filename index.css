@@ -1,0 +1,101 @@
+
+.container h1{
+    text-align: center;
+    margin-bottom: 20px;     
+}
+.container .image > img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+.container .section1{
+    border: 1px solid #ccc;
+}
+.container .section1 .content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 0 200px 20px 200px;
+}
+.container .links ul{
+    display: flex;  
+    align-content: right;         
+    padding: 0;              
+    margin: 0;              
+}
+.container .links ul li {
+    list-style-type: none;
+    padding: 6px 12px;       
+    border-right: 1px solid #333;
+}
+
+.container .links ul li:last-child{
+    border-right: none;
+}
+
+.container .links ul li:hover{
+    background: rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.container .work-section,
+.container .sch-section,
+.container .hobbies{
+    border: 1px solid #ccc;
+    padding: 16px;
+    background: #fff;
+}
+
+
+.container .work-section h1,
+.container .hobbies h1{
+    text-align: center;
+}
+.container .work-section ul,
+.container .hobbies ul{
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+.container .work-section ul li,
+.container .hobbies ul li{
+    width: 100%;          
+    max-width: 600px;     
+    text-align: center;   
+    padding: 8px 12px;
+}
+
+.container .sch-section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+.container .sch-section ul li{
+    background: #f9f9f9;
+    padding: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (max-width: 480px){
+    .container .section1 .content{
+        flex-direction: column;
+        margin: 0 20px 20px 20px;
+        gap: 12px;
+    }
+    .container .work-section,
+    .container .sch-section,
+    .container .hobbies{
+        margin: 0 16px 20px 16px;
+    }
+}
